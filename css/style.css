@@ -1,0 +1,177 @@
+/* Custom styles to complement Tailwind */
+.navbar .nav-menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .left-menu {
+  flex: 1;
+}
+
+.navbar .site-title {
+  flex: 0 0 auto;
+  margin: 0 1rem;
+}
+
+.navbar .right-menu {
+  flex: 1;
+  justify-content: flex-end;
+  margin-left: 2rem;
+}
+
+.language-dropdown:hover .language-menu {
+  display: block;
+}
+
+.testimonial-scroll .scrollbar-hide::-webkit-scrollbar,
+.ride-scroll .scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-scroll .scrollbar-hide,
+.ride-scroll .scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.modal .modal-content {
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.card-grid, .contact-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card, .faq, .contact-details, .contact-form-wrapper, .service-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .faq:hover, .contact-details:hover, .contact-form-wrapper:hover, .service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  transition: background-color 0.3s ease;
+}
+
+.card-image {
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Hero Section Styles */
+.hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-color: #cac7f5; /* Custom beige color if Tailwind bg-beige-100 isn't defined */
+}
+
+.hero h2, .hero p {
+  color: #ffffff; /* Reverted to white for contrast, adjust to #2d3748 (teal-800) if preferred */
+  text-shadow: none; /* Removed shadow since the background is light now */
+}
+
+.hero img {
+  max-height: 750px; /* Optional: constrain image height */
+}
+
+/* Booking Section Styles */
+.booking-section {
+  position: relative;
+}
+
+.booking-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.booking-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.booking-section input {
+  background-color: #fff;
+  color: #333;
+}
+
+.booking-section button:hover {
+  opacity: 0.9;
+}
+
+/* About Us Section Styles */
+#about img {
+  max-height: 400px;
+}
+
+/* Ride Scroll Animation - Disabled */
+.card-grid {
+  /* Removed animation: autoScroll 30s linear infinite; */
+}
+
+/* Driver Promotion Section Styles */
+.driver-promotion {
+  position: relative;
+}
+
+.driver-promotion img {
+  max-height: 400px;
+}
+
+/* Talk to Us Button and Modal Styles */
+.talk-to-us-btn {
+  transition: transform 0.3s ease;
+}
+
+.talk-to-us-btn:hover {
+  transform: scale(1.1);
+}
+
+#talk-modal .modal-content a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+#talk-modal .modal-content a:hover {
+  background-color: #f3f4f6;
+  border-radius: 0.375rem;
+}
+
+#talk-modal .modal-content .bg-green-500 {
+  background-color: #34d399;
+}
+
+#talk-modal .modal-content .bg-red-500 {
+  background-color: #f87171;
+}
+
+/* FAQ Toggle Styles */
+.faq {
+  transition: all 0.3s ease;
+}
+
+.faq-answer {
+  transition: all 0.3s ease;
+}
